@@ -24,7 +24,7 @@ If you're on a Mac you can download the zip file or clone the repo and use [pyth
 
 Or the following will work on a Mac too:
 
-    $ wget https://github.com/telegeography/www.submarinecablemap.com/archive/master.zip
+    $ curl https://codeload.github.com/telegeography/www.submarinecablemap.com/zip/master > master.zip
     $ unzip master.zip
     $ cd www.submarinecablemap.com-master/public/
     $ python -m SimpleHTTPServer
