@@ -1,0 +1,48 @@
+{{#link-to "index" id="allCables"}}Submarine Cable List{{/link-to}}
+<h2 id="name">
+	{{model.name}}
+</h2>
+<a class="email-link" href="mailto:?Subject=TeleGeography%20Submarine%20Cable%20Map&Body=" onclick="this.href=this.href+window.location.href;">Email link</a>
+<div id="description">
+	<ul class="properties">
+		{{#if rfs}}
+		  <li>
+				<strong>RFS:</strong> {{rfsLink rfs}}
+			</li>
+		{{/if}}
+		{{#if length}}
+		  <li>
+				<strong>Cable Length:</strong> {{length}}
+			</li>
+		{{/if}}
+		{{#if owners}}
+		  <li>
+				<strong>Owners:</strong> {{owners}}
+			</li>
+		{{/if}}
+		{{#if url}}
+		  <li>
+				<strong>URL:</strong> <a {{bindAttr href="url"}} onclick="window.open(this.href); return false;">{{url}}</a><br/>
+			</li>
+		{{else}}	
+			<li>
+				<strong>URL:</strong> n.a.<br/>
+			</li>
+		{{/if}}
+		{{#if notes}}
+		  <li>
+				<strong>Notes:</strong> {{notes}}
+			</li>
+		{{/if}}
+	</ul>
+	<h2>
+		Landing Points
+	</h2>
+	<ul class="features">
+		{{#each lp in landing_points}}
+		<li>
+			{{view view.linkToLandingPoint}}
+		</li>
+		{{/each}}
+	</ul>
+</div>

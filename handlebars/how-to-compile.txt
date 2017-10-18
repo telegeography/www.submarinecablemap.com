@@ -1,0 +1,16 @@
+
+# install newest precomplier
+npm install git://github.com/gabrielgrant/node-ember-precompile.git -g
+# precompile handlebars templates
+ember-precompile handlebars/*.handlebars -f src/javascripts/handlebars.tmpl.js
+
+<script type="text/x-handlebars">
+</script>
+<script type="text/x-handlebars" data-template-name="index">
+</script>
+<script type="text/x-handlebars" data-template-name="landing-point">
+</script>
+<script type="text/x-handlebars" data-template-name="submarine-cable">
+</script>
+<script type="text/x-handlebars" data-template-name="landing-point-link">
+</script>
