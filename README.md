@@ -2,7 +2,7 @@
 Submarine Cable Map
 ===================
 
-[TeleGeography's](http://www.telegeography.com) submarine cable map is based on our authoritative [Global Bandwidth](http://www.telegeography.com/research-services/global-bandwidth-research-service/) research and depicts international active and planned submarine cable systems and their landing stations. The map presents data about each cable, including landing points, owners, length, ready-for-service (RFS) date, and website. Try it today! Visit [http://www.submarinecablemap.com](http://www.submarinecablemap.com).
+[TeleGeography's](http://www.telegeography.com) submarine cable map is based on our authoritative [Global Bandwidth](http://www.telegeography.com/research-services/global-bandwidth-research-service/) research and depicts international active and planned submarine cable systems and their landing stations. The map presents data about each cable, including landing points, owners, length, ready-for-service (RFS) date and website. Try it today! Visit [http://www.submarinecablemap.com](http://www.submarinecablemap.com).
 
 
 Installation
@@ -12,7 +12,7 @@ Installation
 
 Point your webserver's document root to the public directory and that's it.
 
-Or you can click the [Download ZIP](https://github.com/telegeography/www.submarinecablemap.com/archive/master.zip) link on the right and download the zip file.  Unzip the zip file and point your webserver's document root to the public directory.
+Or you can click the [Download ZIP](https://github.com/telegeography/www.submarinecablemap.com/archive/master.zip) link on the right and download the zip file.  Unzip the file and point your webserver's document root to the public directory.
 
 If you're on a Mac you can download the zip file or clone the repo and use [python's SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html):
 
