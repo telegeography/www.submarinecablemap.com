@@ -8,6 +8,6 @@ export default Component.extend({
   didInsertElement(){
     this._super(...arguments);
     let application = getOwner(this).application;
-    $("#updated-on a").text(`Last updated on ${$.datepicker.formatDate("MM d, yy", new Date(application.mapConfig.creation_time))}`);
+    $("#updated-on a").text(`Last updated on ${$.datepicker.formatDate("d MM yy", new Date(application.mapConfig.creation_time))}`);
   }
 });
