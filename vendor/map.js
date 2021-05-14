@@ -249,6 +249,15 @@
 
       analytics(category, action, label) {}
 
+      handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+
+
       // _gaq.push(['_trackEvent', category, action, label]) if _gaq
       constructor(element, config) {
         this.element = element;
@@ -268,6 +277,26 @@
           },
           disableDefaultUI: this.isMobile() ? true : false
         });
+        var self = this;
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            var marker = new google.maps.Marker({
+              position: pos,
+              map: self.gmap
+            });
+            self.gmap.setCenter(pos);
+          }, function() {
+            self.handleLocationError(true, infoWindow, self.gmap.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          self.handleLocationError(false, infoWindow, self.gmap.getCenter());
+        }
         this.infoBox = new InfoBox({
           closeBoxURL: "",
           alignBottom: true,
@@ -301,7 +330,7 @@
         "featureType": "poi",
         "stylers": [
           {
-            "visibility": "off"
+            "visibility": "on"
           }
         ]
       },
@@ -309,7 +338,7 @@
         "featureType": "road",
         "stylers": [
           {
-            "visibility": "off"
+            "visibility": "on"
           }
         ]
       },

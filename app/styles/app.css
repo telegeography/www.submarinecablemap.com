@@ -4,10 +4,19 @@ h1, h2, h3, h4 {font-weight:normal; font-size:24px; color:#052743; padding:0; ma
 h2, h3 {font-size:16px; padding: 0 0 12px 0;}
 h3 {font-size:14px; padding:0 0 9px 0;}
 
+::-webkit-scrollbar{height:5px;width:10px;}
+::-webkit-scrollbar-button:vertical{display:none;}
+::-webkit-scrollbar-corner:vertical{background-color:#535353;}
+::-webkit-scrollbar-resizer:vertical{background-color:#FF6E00;}
+::-webkit-scrollbar-thumb:vertical{background-color:#8E8E8E;}
+::-webkit-scrollbar-thumb:vertical:hover{background-color:#CCC;}
+::-webkit-scrollbar-track-piece{background:#EEE;}
+::-webkit-scrollbar-track:vertical{background-color:#000;}
+
 #map {background-color:#fff !important; height:100%; margin-right:342px; }
 .map-container { height:100%;}
 #side_bar, #search, div.infoBoxContent, #updated-on { font-size: 12px; color:#404040;}
-#side_bar { position:absolute; top:0; right:0; width:342px;height:100%;overflow-y:auto;overflow-x:hidden; line-height:18px; -webkit-box-shadow:0 0 1px 1px rgba(0,0,0,0.1); -moz-box-shadow:0 0 1px 1px rgba(0,0,0,0.1); box-shadow:0 0 1px 1px rgba(0,0,0,0.1);}
+#side_bar { position:absolute; top:0; right:0; width:342px;height:100%;overflow:hidden; line-height:18px; -webkit-box-shadow:0 0 1px 1px rgba(0,0,0,0.1); -moz-box-shadow:0 0 1px 1px rgba(0,0,0,0.1); box-shadow:0 0 1px 1px rgba(0,0,0,0.1);}
 #header, #content {width:306px;padding:0 18px 0 18px;}
 #header, #header-portrait {padding:22px 18px 9px 18px; border-top:2px solid #0D71BA;}
 #header-portrait { padding:9px 9px 8px 9px; border-bottom:1px solid #e5e5e5; }
@@ -19,15 +28,15 @@ h3 {font-size:14px; padding:0 0 9px 0;}
 .company-logos { position:relative; width:275px; height:47px;}
 .company-logo { position:absolute; top:0; left:0; }
 .company-logo, .company-logo-portrait {width:275px; height:47px; background-repeat:no-repeat; background-color:#fff; }
-.huawei-marine-logo { background-image:url(images/huawei-marine-logo.png); }
-.equinix-logo { background-image:url(images/equinix-logo.png); }
+.huawei-marine-logo { background-image:url(images/huawei-marine-logo.png);background-size: 46px auto; }
+.equinix-logo { background-image:url(images/equinix-logo.png);background-size: 160px auto; }
 .company-logo-portrait { position:absolute; top:7px; right:9px; height:20px; width:50%; background-size:contain; background-repeat:no-repeat; background-position:right top;  }
 #content {padding-bottom:18px;}
 #search {width:284px; height:18px; line-height:18px; font-size:14px; padding:0 18px 0 40px; color:#fff; border:none;background:none;outline:none;font-family:Helvetica,Arial;font-weight:bold;}
 #search.focus { color:#0071bc;}
 #nav { height:18px; padding:11px 0 11px 0; margin:0 0 18px 0;background:#0071bc url(images/search-icon.png) 18px 13px no-repeat;color:#fff;}
 #nav.focus { background:#F6ECCF url(images/search-icon.png) 18px -23px no-repeat; color:#0071bc;}
-#description { padding:0 0 32px 0;}
+#description { padding:0 0 32px 0;height: 100%;}
 #copyright { position:fixed; right:0; bottom:0; width:306px; height:32px; line-height:32px; padding:0 18px 0 18px; background:#fff;}
 
 h2#name {padding:0;}
@@ -48,9 +57,11 @@ a.email-link:hover {background-position:0 -48px;}
 div.infoBoxContent {position:relative;float:left;min-width:100px;padding:5px 10px 5px 10px;background:#0071bc;color:#fff;}
 div.infoBoxPointer {position:absolute;bottom:-9px;left:56px;width:10px;height:9px;background:url(images/info-box-pointer.png);}
 
-ul {margin:0;padding:0;}
+ul {margin:0;padding:0 20px;}
+ul.features {height:calc(100vh - 380px);overflow: auto;}
 ul.features, a, a:visited {color:#0071bc;}
-ul.features li a { display:block; min-height:18px; line-height:18px; }
+ul.features li a { display:block; min-height:18px; line-height:22px; }
+ul.features li {list-style: decimal-leading-zero;border-bottom: 1px solid #0071bc;}
 ul.properties {padding:0 0 18px 0;}
 ul.properties strong {font-weight:normal; color:#052743;}
 li { list-style-type:none; padding:0; margin:0; }
@@ -70,7 +81,7 @@ ul.ui-menu { padding:0; }
 
 .fade { position:absolute; right:0; bottom:32px; background-image: url(images/fade.png); background-repeat:repeat-x; background-position:1px 1px; height:18px; width:342px; }
 
-a#allCables {display:block;margin:0 0 12px 0;}
+a#allCables {display:block;margin:0 0 12px 0;font-weight: 700;}
 a {text-decoration:none;}
 a:hover {color:#bcbcbc;}
 
